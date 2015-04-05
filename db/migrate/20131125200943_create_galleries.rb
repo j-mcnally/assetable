@@ -1,7 +1,7 @@
 class CreateGalleries < ActiveRecord::Migration
   def change
     create_table :galleries do |t|
-      t.references :galleryable, :polymorphic => true
+      t.references :galleryable, :polymorphic => true, name: "gallery_galleryable_poly"
       t.string :name
       t.timestamps
     end
